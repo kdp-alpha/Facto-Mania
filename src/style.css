@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #000000;
+    color: #fafaf9;
+    padding: 48px 64px;
+}
+.main{
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 48px; 
+    height: 60vh;    
+}
+
+@media (max-width:900px){
+    .main{
+        grid-template-columns: 1fr;
+    }
+}
+#root{
+    max-width: 1400px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    height: calc(100vh - 68px - 40px - 48px);
+}
+
+section{
+    overflow: scroll;
+    padding-bottom: 40px;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+.hidden{
+    display: none !important; 
+}
+
+.message{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 24px;
+}
+h1 {
+    font-size: 42px;
+    text-transform: uppercase;
+    
+   
+}
+.header{
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.fact {
+    font-size: 20px;
+    line-height: 1.4;
+    font-family: sans-serif;
+    color: #fafaf9;
+    background-color: #262626;
+    margin-bottom: 40px;
+    padding: 16px 24px;
+    letter-spacing: 2px;
+
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border-radius: 20px;
+}
+.fact-form{
+    background-color: #262626;
+    margin-bottom: 40px;
+    padding: 16px 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 20px;
+}
+
+.tag {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fafaf9;
+    
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 100px;
+}
+.vote-buttons{
+    margin-left: auto;
+    flex-shrink: 0;
+    display: flex;
+    gap: 8px;
+}
+
+.vote-buttons button{
+    background-color: #78716c;
+    font-size: 15px;
+    padding: 6px 12px;
+    border-radius: 50px;
+    cursor: pointer;
+    color: inherit;
+    
+}
+.vote-buttons button:disabled{
+    background-color: darkgrey;
+}
+.vote-buttons button:hover{
+    background-color: #292524;
+}
+
+ul {
+    list-style: none;
+}
+.source,
+.source:visited
+{
+    color: #a8a29e;
+    text-decoration: none;
+    margin-left: 12px;
+    transition: 0.3s;
+}
+
+.source:hover{
+    color: #3b82f6;
+    
+}
+.source:active{
+    color: green;
+}
+
+.btn {
+    border: none;
+    font-family: sans-serif;
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: 17px;
+    padding: 16px 0 13px;
+    background-image: linear-gradient(135deg,#3b82f6,#ef4444,#16a34a,#eab308);
+    color: inherit;
+    transition: 0.3s;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.btn-large {
+    font-size: 20px;
+    padding: 20px 32px 17px;
+
+}
+.all{
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.btn:hover{
+    transform: scale(110%) rotate(-2deg);
+    
+
+}
+
+.btn-category{
+    width: 100%;
+    background-image: none;
+}
+
+.category{
+    margin-bottom: 16px;
+}
+
+.fact-form input, .fact-form select{
+    width: 200px;
+    background-color: #78716c;
+    border: none;
+    border-radius: 50px;
+    padding: 16px;
+    font-size: 18px;
+    color: inherit;
+}
+.fact-form input::placeholder{
+    color: #a8a29e;
+}
+.fact-form input:first-child{
+    flex-grow: 1;
+}
+.fact-form span{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+@media (max-width:1000px) {
+    body{
+        padding: 32px 48px;
+    }
+    .fact-form{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .fact-form input,
+    .fact-form select {
+        width: auto;
+    }
+}
+
+@media (max-width:1200px) {
+    .fact {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 12px;
+    }
+}
+
+.fact-input{
+    cursor: pointer;
+}
+
+@media (max-width:900px){
+    .main{
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+}
